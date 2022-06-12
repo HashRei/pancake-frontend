@@ -34,17 +34,8 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
         href: '/swap',
       },
       {
-        label: t('Limit'),
-        href: '/limit-orders',
-      },
-      {
         label: t('Liquidity'),
         href: '/liquidity',
-      },
-      {
-        label: t('Perpetual'),
-        href: `https://perp.pancakeswap.finance/${perpLangMap(languageCode)}/futures/BTCUSDT`,
-        type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
   },
@@ -55,6 +46,10 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     fillIcon: EarnFillIcon,
     items: [
       {
+        label: t('Staking'),
+        href: '/farms',
+      },
+      {
         label: t('Farms'),
         href: '/farms',
       },
@@ -64,27 +59,27 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
       },
     ],
   },
-  {
-    label: t('Win'),
-    href: '/prediction',
-    icon: TrophyIcon,
-    fillIcon: TrophyFillIcon,
-    items: [
-      {
-        label: t('Trading Competition'),
-        href: '/competition',
-        hideSubNav: true,
-      },
-      {
-        label: t('Prediction (BETA)'),
-        href: '/prediction',
-      },
-      {
-        label: t('Lottery'),
-        href: '/lottery',
-      },
-    ],
-  },
+  // {
+  //   label: t('Win'),
+  //   href: '/prediction',
+  //   icon: TrophyIcon,
+  //   fillIcon: TrophyFillIcon,
+  //   items: [
+  //     {
+  //       label: t('Trading Competition'),
+  //       href: '/competition',
+  //       hideSubNav: true,
+  //     },
+  //     {
+  //       label: t('Prediction (BETA)'),
+  //       href: '/prediction',
+  //     },
+  //     {
+  //       label: t('Lottery'),
+  //       href: '/lottery',
+  //     },
+  //   ],
+  // },
   {
     label: t('NFT'),
     href: `${nftsBaseUrl}`,
@@ -93,15 +88,15 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     items: [
       {
         label: t('Overview'),
-        href: `${nftsBaseUrl}`,
+        href: `https://nft-marketplace-hashrei.vercel.app/`,
       },
       {
-        label: t('Collections'),
-        href: `${nftsBaseUrl}/collections`,
+        label: t('Marketplace'),
+        href: `https://nft-marketplace-hashrei.vercel.app/MarketplacePage`,
       },
       {
-        label: t('Activity'),
-        href: `${nftsBaseUrl}/activity`,
+        label: t('Code'),
+        href: `https://github.com/HashRei/nft-marketplace`,
       },
     ],
   },
@@ -113,34 +108,23 @@ const config: (t: ContextApi['t'], languageCode?: string) => ConfigMenuItemsType
     items: [
       {
         label: t('Info'),
-        href: '/info',
-      },
-      {
-        label: t('IFO'),
-        href: '/ifo',
+        href: 'https://github.com/HashRei',
       },
       {
         label: t('Voting'),
-        href: '/voting',
+        href: 'https://www.tally.xyz/governance/eip155:4:0xBBFc55Fb69e7D940B3fA3B637c8E0C22704b681f',
       },
       {
         type: DropdownMenuItemType.DIVIDER,
       },
       {
-        label: t('Leaderboard'),
-        href: '/teams',
-      },
-      {
-        type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Blog'),
-        href: 'https://medium.com/pancakeswap',
+        label: t('DAO Code'),
+        href: 'https://github.com/HashRei/on-chain-dao',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
       {
-        label: t('Docs'),
-        href: 'https://docs.pancakeswap.finance',
+        label: t('Twitter'),
+        href: 'https://twitter.com/HashRei_',
         type: DropdownMenuItemType.EXTERNAL_LINK,
       },
     ],
